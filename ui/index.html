@@ -22,30 +22,33 @@
 
 <body>
 
-<div id="SWSUI"></div>
+    <div id="SWSUI"></div>
 
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
-<script src="../node_modules/moment/min/moment.min.js"></script>
-<script src="../node_modules/chosen-js/chosen.jquery.js"></script>
-<script src="plugins/datatables/datatables.min.js"></script>
-<script src="plugins/highlightjs/highlight.pack.js"></script>
-<script src="plugins/peity/jquery.peity.min.js"></script>
-<script src="swsLayout.js"></script>
-<script src="swsTable.js"></script>
-<script src="swsuiWidget.js"></script>
-<script src="swsuiChart.js"></script>
-<script src="swsApiOpSel.js"></script>
-<script src="sws.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="../node_modules/moment/min/moment.min.js"></script>
+    <script src="../node_modules/chosen-js/chosen.jquery.js"></script>
+    <script src="plugins/datatables/datatables.min.js"></script>
+    <script src="plugins/highlightjs/highlight.pack.js"></script>
+    <script src="plugins/peity/jquery.peity.min.js"></script>
+    <script src="swsLayout.js"></script>
+    <script src="swsTable.js"></script>
+    <script src="swsuiWidget.js"></script>
+    <script src="swsuiChart.js"></script>
+    <script src="swsApiOpSel.js"></script>
+    <script src="sws.js"></script>
 
-<!-- Page-Level Scripts -->
-<script>
-    $(document).ready(function(){
-       $('#SWSUI').swaggerstatsui({swsBasePath:'/swagger-stats'});
-    });
-</script>
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+            $('#SWSUI').swaggerstatsui({
+                swsBasePath: '/swagger-stats'
+            });
+        });
+    </script>
 
 
 </body>
+
 </html>
