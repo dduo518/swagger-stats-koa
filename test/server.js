@@ -7,9 +7,8 @@ const router = require('koa-router')()
 app.use(bodyParser())
 
 // var apiSpec = require('swagger.json');
-app.use(swStats.getMiddleware({
-    elasticsearch: "http://10.40.2.89:9200",
-    elasticsearchIndex: "testIndex"
+app.use( swStats.getMiddleware({
+    elasticsearch: "http://10.40.2.89:9200"
 }));
 
 
