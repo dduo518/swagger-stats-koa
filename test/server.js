@@ -7,17 +7,18 @@ const router = require('koa-router')()
 app.use(bodyParser())
 
 // var apiSpec = require('swagger.json');
-app.use( swStats.getMiddleware({
+app.use(swStats.getMiddleware({
     elasticsearch: "http://10.40.2.89:9200"
 }));
-
+const cluster = require('cluster')
 
 router.post('/api', async ctx => {
     ctx.body = {
         success: true,
         data: {
             api: "1111"
-        }
+        },
+        pid: process.pid
     }
 })
 
@@ -30,6 +31,7 @@ router.get('/apiget', async ctx => {
         }
     }
 })
+
 
 app.use(router.routes()).use(router.allowedMethods())
 app.listen(4040, '0.0.0.0');
