@@ -11,15 +11,12 @@ if (cluster.isMaster) {
     sws.clusterSws()
     cluster.on('exit', (worker, code, signal) => {
         cluster.fork();
-        // sws.restartWorker(reWork.id)
         console.log(`工作进程 ${worker.process.pid} 已退出`);
     });
 
-    cluster.on('disconnect', function() {
-        clsuter.fork();
-    });
-
-
+    // cluster.on('disconnect', function() {
+    //     clsuter.fork();
+    // });
 } else {
     require('./server')
     console.log(`工作进程 ${process.pid} 已启动`);
